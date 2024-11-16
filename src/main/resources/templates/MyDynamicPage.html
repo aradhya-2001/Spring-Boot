@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>MyDynamicPage</title>
+</head>
+<body>
+<h1>My Dynamic Page</h1>
+<p>Para in Dynamic Page</p>
+<p>Server Time: <span th:text = "${date}"></span></p>
+<h2>Person List</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+    </tr>
+    <tr th:each = "person : ${personList}">
+        <td th:text="${person.id}"></td>
+        <td th:text="${person.name}"></td>
+    </tr>
+</table>
+</body>
+</html>
